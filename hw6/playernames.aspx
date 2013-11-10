@@ -5,11 +5,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <link rel="stylesheet" type="text/css" href="./CSS/StyleSheet.css" />
 </head>
 <body>
     <form id="form1" runat="server">
     <div>
-    
+    <h2 class ="name">
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:Players_cs %>" DeleteCommand="DELETE FROM [Table] WHERE [playerID] = @playerID" InsertCommand="INSERT INTO [Table] ([playerName], [playerPosition], [playerNumber], [playerHeight], [playerWeight], [playerBirth], [playerCollege], [playerTeam]) VALUES (@playerName, @playerPosition, @playerNumber, @playerHeight, @playerWeight, @playerBirth, @playerCollege, @playerTeam)" SelectCommand="SELECT * FROM [Table]" UpdateCommand="UPDATE [Table] SET [playerName] = @playerName, [playerPosition] = @playerPosition, [playerNumber] = @playerNumber, [playerHeight] = @playerHeight, [playerWeight] = @playerWeight, [playerBirth] = @playerBirth, [playerCollege] = @playerCollege, [playerTeam] = @playerTeam WHERE [playerID] = @playerID">
             <DeleteParameters>
                 <asp:Parameter Name="playerID" Type="Int32" />
@@ -36,18 +37,20 @@
                 <asp:Parameter Name="playerID" Type="Int32" />
             </UpdateParameters>
         </asp:SqlDataSource>
-        <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="playerID" DataSourceID="SqlDataSource1" Width="936px">
+        <br />
+        <a href="./Default.aspx">Home</a>
+        <br />
+        <a href="./newplayer.aspx">Add New Player</a>
+        <br />
+        <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="playerID" DataSourceID="SqlDataSource1" Width="936px" CssClass="cssgridview">
             <Columns>
                 <asp:BoundField DataField="playerName" HeaderText="Name" SortExpression="playerName" />
-                <asp:BoundField DataField="playerPosition" HeaderText="Position" SortExpression="playerPosition" />
-                <asp:BoundField DataField="playerNumber" HeaderText="Number" SortExpression="playerNumber" />
-                <asp:BoundField DataField="playerTeam" HeaderText="Current Team" SortExpression="playerTeam" />
-                <asp:HyperLinkField DataNavigateUrlFields="playerID" DataNavigateUrlFormatString="playerdetails.aspx?playerID={0}" Text="View Details" />
+                <asp:HyperLinkField DataNavigateUrlFields="playerID" DataNavigateUrlFormatString="playerdetails.aspx?playerID={0}" Text="View Detalis" />
             </Columns>
         </asp:GridView>
         <br />
         <br />
-    
+    </h2>
     </div>
     </form>
 </body>

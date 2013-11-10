@@ -1,0 +1,49 @@
+﻿body {background-color: black; }
+.deletedplayer {
+    color: red;
+    font-family: Tahoma;
+    font-variant: small-caps;
+    font-size: 16px;
+}
+.h1 {
+    color: white;
+    font-size: 32px;
+    font-family: Rockwell;
+    font-variant: small-caps;
+    font-style: italic;
+    text-align:center;
+}
+.nav {
+    color: white;
+    font-size: 16px;
+    font-family: Rockwell;
+    font-variant: small-caps;
+    text-align: center;
+    text-wrap: normal;
+}
+.name {
+    color: white;
+    font-size: 16px;
+    font-family: 'Times New Roman';
+}
+.cssgridview {
+    width: 500px;
+    background-color: slateblue;
+    border: solid 6px red;
+    text-align:center;
+    padding:10px;
+}
+
+.pictures {
+    border: solid 3px red;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#nav { background:#000000; padding:4px 10px; text-align:center; }
+
+
+a { text-decoration:none; font-weight: none; }
+a:link, a:visited { color: #fff; }	
+a:hover { color: slateblue; background-color: red; text-decoration: underline; }	
+

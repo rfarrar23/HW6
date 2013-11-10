@@ -5,8 +5,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <link rel="stylesheet" type="text/css" href="./CSS/StyleSheet.css" />
 </head>
 <body>
+    <div>
+
+    <h2 class ="name">
+
     <form id="form1" runat="server">
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:Players_cs %>" DeleteCommand="DELETE FROM [Table] WHERE [playerID] = @playerID" InsertCommand="INSERT INTO [Table] ([playerName], [playerPosition], [playerNumber], [playerHeight], [playerWeight], [playerBirth], [playerCollege], [playerTeam]) VALUES (@playerName, @playerPosition, @playerNumber, @playerHeight, @playerWeight, @playerBirth, @playerCollege, @playerTeam)" SelectCommand="SELECT * FROM [Table] WHERE ([playerID] = @playerID)" UpdateCommand="UPDATE [Table] SET [playerName] = @playerName, [playerPosition] = @playerPosition, [playerNumber] = @playerNumber, [playerHeight] = @playerHeight, [playerWeight] = @playerWeight, [playerBirth] = @playerBirth, [playerCollege] = @playerCollege, [playerTeam] = @playerTeam WHERE [playerID] = @playerID">
             <DeleteParameters>
@@ -37,7 +42,18 @@
                 <asp:Parameter Name="playerID" Type="Int32" />
             </UpdateParameters>
         </asp:SqlDataSource>
-        <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" DataKeyNames="playerID" DataSourceID="SqlDataSource1" Height="50px" Width="601px" DefaultMode="Insert">
+        </h2>
+        </div>
+        <br />
+        <div id="nav">
+        <a href="./Default.aspx">Home</a>
+        <br />
+        <a href="./playernames.aspx">View All Players</a>
+        </div>
+        <br />
+        <div>
+        <h2 class ="name">
+        <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" DataKeyNames="playerID" DataSourceID="SqlDataSource1" Height="50px" Width="601px" CssClass="cssgridview" DefaultMode="Insert">
             <Fields>
                 <asp:BoundField DataField="playerName" HeaderText="Name" SortExpression="playerName" />
                 <asp:BoundField DataField="playerPosition" HeaderText="Position" SortExpression="playerPosition" />
@@ -50,9 +66,8 @@
                 <asp:CommandField ShowInsertButton="True" />
             </Fields>
         </asp:DetailsView>
-    <div>
-    
-    </div>
+        </h2>
+        </div>
     </form>
 </body>
 </html>
