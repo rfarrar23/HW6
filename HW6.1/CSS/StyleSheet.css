@@ -1,0 +1,94 @@
+﻿body {background-color: black;
+      border: solid 4px slateblue;
+      margin: 0 auto;
+}
+.deletedplayer {
+    color: red;
+    font-family: Tahoma;
+    font-variant: small-caps;
+    font-size: 16px;
+}
+.h1 {
+    color: white;
+    font-size: 32px;
+    font-family: Rockwell;
+    font-variant: small-caps;
+    font-style: italic;
+    text-align:center;
+}
+.nav {
+    color: white;
+    font-size: 16px;
+    font-family: Rockwell;
+    font-variant: small-caps;
+    text-align: center;
+    text-wrap: normal;
+}
+.name {
+    color: white;
+    font-size: 16px;
+    font-family: 'Times New Roman';
+}
+.cssgridview {
+    width: 500px;
+    background-color: slateblue;
+    border: solid 6px red;
+    text-align:center;
+}
+
+.cssgridview td {padding:10px; 
+                 border:solid 1px; 
+                 color: white;  
+
+}
+.cssgridview th {
+        padding: 4px 2px;
+        border: solid 1px;
+        color: #FFFFFF;
+        background-color: slategray;
+    }
+
+
+.pictures {
+    border: solid 3px red;
+    margin-left: auto;
+    margin-right: auto;
+}
+#Gridview1 {
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#DetailsView1 { 
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pic {
+	float:right;
+	position: relative;
+	background: #fff;
+	width: 250px;
+	padding: 40px;
+	margin-left: 30px;
+	margin-right: 175px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border: solid 1px black; 
+	}
+
+#footer {
+    background: black;
+    text-align: center;
+    color:white;
+}
+
+#nav { background:#000000; padding:4px 10px; text-align:center; border: double white; fill: slateblue; }
+
+
+a { text-decoration:none; font-weight: none; }
+a:link, a:visited { color: #fff; }	
+a:hover { color: slateblue; background-color: red; text-decoration: underline; }	
+
